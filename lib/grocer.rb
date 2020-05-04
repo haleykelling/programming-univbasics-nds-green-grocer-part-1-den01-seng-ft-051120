@@ -17,6 +17,13 @@ def consolidate_cart(cart)
   new_cart=[]
   n = 0
   while n < cart.length do
-
+    next_item = cart[n][:item]
+    next_item_hash = find_item_by_name_in_collection(next_item, cart)
+    if next_item_hash[:item] == new_cart[count][:item]
+      new_cart.push(next_item_hash[:count] += 1)
+    else
+      next_item_hash[:count] = 1
+      new_cart.push(next_item_hash)
+    end
   end
 end
