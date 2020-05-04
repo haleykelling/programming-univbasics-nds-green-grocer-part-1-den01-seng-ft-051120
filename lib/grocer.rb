@@ -26,4 +26,5 @@ def consolidate_cart(cart)
       new_cart.push(next_item_hash)
     end
   end
+  return new_cart
 end
